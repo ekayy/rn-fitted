@@ -9,11 +9,20 @@
   "dependencies": {
     "native-base": "^2.1.0",
     "react": "15.4.2",
-    "react-native": "0.42.3"
+    "react-native": "0.42.3",
+    "react-navigation": "^1.0.0-beta.7",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",
     "babel-preset-react-native": "1.9.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
     "jest": "19.0.2",
     "react-test-renderer": "15.4.2"
   },
