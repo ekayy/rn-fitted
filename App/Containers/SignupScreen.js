@@ -7,23 +7,12 @@ import {
   TouchableOpacity,
   Image,
   Keyboard,
-  LayoutAnimation,
-  Button
+  LayoutAnimation
 } from 'react-native';
 import Styles from './Styles/LoginScreenStyles';
 import {Metrics} from '../Themes';
 
-class LoginScreen extends React.Component {
-
-  static propTypes = {
-    dispatch: PropTypes.func,
-    fetching: PropTypes.bool,
-    attemptLogin: PropTypes.func
-  }
-
-  isAttempting = false
-  keyboardDidShowListener = {}
-  keyboardDidHideListener = {}
+class SignupScreen extends React.Component {
 
   constructor (props) {
     super(props)
@@ -37,28 +26,9 @@ class LoginScreen extends React.Component {
   }
 
   handlePressLogin = () => {
-    const { username, password } = this.state
-    this.isAttempting = true
-    // attempt a login - a saga is listening to pick it up from here.
-    // this.props.attemptLogin(username, password)
-
     const { navigate } = this.props.navigation;
 
-    navigate('Main');
-  }
-
-  handlePress = () => {
-    const { navigate } = this.props.navigation;
-
-    navigate('Signup');
-  }
-
-  handleChangeUsername = (text) => {
-    this.setState({ username: text })
-  }
-
-  handleChangePassword = (text) => {
-    this.setState({ password: text })
+    navigate('Signup1');
   }
 
   render () {
@@ -105,20 +75,10 @@ class LoginScreen extends React.Component {
           <View style={[Styles.loginRow]}>
             <TouchableOpacity style={Styles.loginButtonWrapper} onPress={this.handlePressLogin}>
               <View style={Styles.loginButton}>
-                <Text style={Styles.loginText}>Login</Text>
+                <Text style={Styles.loginText}>Sign Up</Text>
               </View>
             </TouchableOpacity>
           </View>
-        </View>
-
-        <View>
-          <TouchableOpacity>
-            <View>
-              <Button title="Signup" onPress={this.handlePress}>
-                <Text>Sign Up</Text>
-              </Button>
-            </View>
-          </TouchableOpacity>
         </View>
       </ScrollView>
     );
@@ -126,4 +86,4 @@ class LoginScreen extends React.Component {
 
 }
 
-export default LoginScreen;
+export default SignupScreen;

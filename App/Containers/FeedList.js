@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
-import {
-  Container, Content
-} from 'native-base';
+import { ScrollView, View } from 'react-native';
 
 import FeedItem from './FeedItem';
 
 class FeedList extends Component {
+
   render() {
     return (
-      <Container>
-        <Content>
+      <ScrollView>
+        <View>
           <FeedItem />
           <FeedItem />
           <FeedItem />
-          <FeedItem />
-          <FeedItem />
-          <FeedItem />
-        </Content>
-      </Container>
+        </View>
+      </ScrollView>
     );
   }
 }

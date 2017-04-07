@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native';
+import { Image, TouchableWithoutFeedback } from 'react-native';
 import {
   Card, CardItem, Text, Button, Icon, Body, Right
 } from 'native-base';
 
 class FeedItem extends Component {
+
   render() {
     return (
       <Card>
         <CardItem cardBody>
-          <Image
-            style={{ flex: 1, resizeMode: 'cover' }}
-            source={require('../Images/fit1.png')}
-          />
+          <TouchableWithoutFeedback onPress={this.handlePress}>
+            <Image
+              style={{ flex: 1, resizeMode: 'cover' }}
+              source={require('../Images/fit1.png')}
+            />
+          </TouchableWithoutFeedback>
         </CardItem>
 
         <CardItem>
