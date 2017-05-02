@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, StatusBar } from 'react-native';
 import Navigation from '../Navigation/AppNavigation';
+import { connect } from 'react-redux';
 
 class RootContainer extends Component {
   render() {
@@ -13,4 +14,4 @@ class RootContainer extends Component {
   }
 }
 
-export default RootContainer;
+export default connect(null)(RootContainer);

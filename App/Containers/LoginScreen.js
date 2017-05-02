@@ -10,6 +10,8 @@ import {
   LayoutAnimation,
   Button
 } from 'react-native';
+import { connect } from 'react-redux';
+import { emailChanged } from '../Redux/LoginActions';
 import Styles from './Styles/LoginScreenStyles';
 import {Metrics} from '../Themes';
 
@@ -126,4 +128,10 @@ class LoginScreen extends React.Component {
 
 }
 
-export default LoginScreen;
+const mapStateToProps = (state) => {
+  return {
+    fetching: state.login.fetching
+  }
+}
+
+export default connect(mapStateToProps, { emailChanged })(LoginScreen);
